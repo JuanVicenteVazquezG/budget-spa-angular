@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "budget-spa-angular"
+    }
+  },
+  "defaultProject": "budget-spa-angular",
+  "cli": {
+    "analytics": false
+  }
 }
