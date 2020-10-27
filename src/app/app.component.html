@@ -1,4 +1,11 @@
-<app-header></app-header>
+<app-header
+  [totalBudget]="getTotalBudget()"
+  [totalEntry]="getTotalEntry()"
+  [totalExpense]="getTotalExpense()"
+  [totalPercentage]="getTotalPercentage()"
+></app-header>
 <app-form></app-form>
-<app-entry ></app-entry>
-<app-expense ></app-expense>
+<div class="container cleanstyles">
+  <app-entry></app-entry>
+  <app-expense></app-expense>
+</div>

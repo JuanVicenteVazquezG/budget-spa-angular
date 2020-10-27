@@ -8,6 +8,9 @@ import { FormComponent } from './form/form.component';
 import { EntryComponent } from './entry/entry.component';
 import { ExpenseComponent } from './expense/expense.component';
 
+import { EntryService } from './entry/entry.service';
+import { ExpenseService } from './expense/expense.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,7 @@ import { ExpenseComponent } from './expense/expense.component';
   imports: [
     BrowserModule, FormsModule
   ],
-  providers: [],
+  providers: [EntryService, ExpenseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

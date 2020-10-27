@@ -1,4 +1,4 @@
-import { Entry } from "./entry.model";
+import { Entry } from './entry.model';
 
 export class EntryService
 {

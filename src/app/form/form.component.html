@@ -1,6 +1,6 @@
 <form>
-  <div class="agregar">
-    <div class="agregar_contenedor">
+  <div class="add">
+    <div class="add_container">
       <select name="entriesNExpenses" [(ngModel)]="sign" class="add_type">
         <option value="+" selected>+</option>
         <option value="-">-</option>
@@ -19,7 +19,11 @@
         name="qty"
         [(ngModel)]="qty"
       />
-      <button class="add_btn cleanstyles" type="submit" (click)="onAddEntryOrExpense()">
+      <button
+        class="add_btn cleanstyles"
+        type="submit"
+        (click)="onAddEntryOrExpense()"
+      >
         <i class="ion-ios-checkmark-outline"></i>
       </button>
     </div>
