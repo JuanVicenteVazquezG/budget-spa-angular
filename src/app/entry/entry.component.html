@@ -1,24 +1,12 @@
 <div class="entry">
-  <h2 class="entry_title">ENTRIES</h2>
-  <div class="element cleanstyles">
-    <div class="element_description">Salario</div>
+  <h2 class="entry_title">Entries</h2>
+  <div *ngFor="let entry of entries" class="element cleanstyles">
+    <div class="element_description">{{entry.description}}</div>
     <div class="right cleanstyles">
-      <div class="element_value">+ 2,100.00</div>
+      <div class="element_value">+{{entry.value}}</div>
       <div class="element_delete">
-        <button class="element_delete--btn">
-          <i class="ion-ios-close-outline"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="element cleanstyles">
-    <div class="element_description">Venta coche</div>
-    <div class="right cleanstyles">
-      <div class="element_value">+ 1,500.00</div>
-      <div class="element_delete">
-        <button class="element_delete--btn">
-          <i class="ion-ios-close-outline"></i>
+        <button class="element_delete--btn" (click)="deleteRecord(entry)">
+          <i  class="iconify" data-icon="ion-ios-close-circle-outline" data-inline="true" ></i>
         </button>
       </div>
     </div>
