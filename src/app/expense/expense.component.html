@@ -3,8 +3,10 @@
   <div *ngFor="let expense of expenses" class="element cleanstyles">
     <div class="element_description">{{ expense.description }}</div>
     <div class="right cleanstyles">
-      <div class="element_value">- {{ expense.value }}</div>
-      <div class="element_percentage">{{ calcPercentage(expense) }}%</div>
+      <div class="element_value">
+        - {{ expense.value | currency: "EUR":"€":"1.2-2" }}
+      </div>
+      <div class="element_percentage">{{ calcPercentage(expense) | percent }}</div>
       <div class="element_delete">
         <button class="element_delete--btn" (click)="deleteRecord(expense)">
           <i
