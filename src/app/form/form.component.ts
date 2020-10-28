@@ -13,16 +13,17 @@ export class FormComponent implements OnInit {
   public description: string;
   public qty: number;
   public sign: string;
-  private type = 'EntryOperation';
+  public typeOperation = 'EntryOperation';
 
   constructor(private entryService: EntryService,
               private expenseService: ExpenseService) {
   }
 
-  onAddEntryOrExpense(): void {
+  onAddEntryOrExpense(event): void {
+    event.preventDefault();
     if (this.description.trim() === '') { return; }
     if (this.qty <= 0) { return; }
-    if (this.type === 'EntryOperation') {
+    if (this.typeOperation === 'EntryOperation') {
       this.entryService.entries.push(new Entry
         (
           this.description, this.qty
@@ -50,7 +51,7 @@ export class FormComponent implements OnInit {
   }
 
   operationType(event): void {
-    this.type = event.target.value;
+    this.typeOperation = event.target.value;
   }
 
 }

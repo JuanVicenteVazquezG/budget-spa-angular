@@ -1,6 +1,6 @@
 # BudgetSpaAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+This little practice of Angular, helps us to control the money we have, introducing inflows and outflows of money, counting in each case with a description of each bank movement.
 
 ## Development server
 

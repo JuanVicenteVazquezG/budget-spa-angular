@@ -10,6 +10,7 @@
         <option value="ExpenseOperation">-</option>
       </select>
       <input
+        [ngClass]="{ redfocus: typeOperation === 'ExpenseOperation' }"
         class="add_description"
         type="text"
         placeholder="Add Description"
@@ -18,6 +19,7 @@
         required
       />
       <input
+        [ngClass]="{ redfocus: typeOperation === 'ExpenseOperation' }"
         class="add_value"
         type="number"
         placeholder="Value"
@@ -28,9 +30,10 @@
       <button
         class="add_btn cleanstyles"
         type="submit"
-        (click)="onAddEntryOrExpense()"
+        (click)="onAddEntryOrExpense($event)"
       >
         <i
+          [ngClass]="{ red: typeOperation === 'ExpenseOperation' }"
           class="iconify"
           data-icon="ion-ios-checkmark-outline"
           data-inline="false"
